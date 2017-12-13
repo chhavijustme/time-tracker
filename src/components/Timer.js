@@ -1,30 +1,16 @@
 import React, {Component} from 'react';
 // require("moment-duration-format");
 
-function formatTimeString (timestamp){
+function formatTimeString (timestamp) {
     var moment = require('moment');
     moment().format();
-    console.log(timestamp);
-    console.log(tempTime);
-    var z=timestamp;
 
-    var tempTime = moment.duration(z);
-    var y = tempTime.hours() + ":" + tempTime.minutes() + ":" + tempTime.seconds();
-    console.log(tempTime);
-    console.log(y);
-    return y;
+    return moment().startOf('day')
+        .milliseconds(timestamp)
+        .format('H:mm:ss');
 }
 
 class Timer extends React.Component { render() {
-
-    var moment = require('moment');
-    moment().format();
-
-    // var tempTime = moment.duration(this.props.elapsed);
-    // var y = tempTime.hours() + ":" + tempTime.minutes() + ":" + tempTime.seconds();
-    // console.log(y);
-    // console.log(tempTime);
-
 
     return (
         <div className='ui centered card'>
