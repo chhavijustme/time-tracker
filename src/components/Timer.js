@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-// require("moment-duration-format");
 
 function formatTimeString (timestamp) {
     var moment = require('moment');
